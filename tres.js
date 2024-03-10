@@ -1,6 +1,6 @@
 /* Verificador de maioridade*/
 
-var data = prompt('Digite a data do seu nascimento');
+var data = prompt('Digite a data do seu nascimento - dd/mm/aa');
 
 function getAge(data) {
 
