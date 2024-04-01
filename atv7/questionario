@@ -1,0 +1,170 @@
+// Questão 1: Calculando potência sem utilizar a função de potência da linguagem
+let base = parseInt(prompt('Digite o valor da base:'));
+let expoente = parseInt(prompt("Digite o valor do expoente:"));
+let resultadoPotencia = 1;
+
+for (let i = 1; i <= expoente; i++) {
+    resultadoPotencia *= base;
+}
+
+console.log(base + " elevado a " + expoente + " é igual a " + resultadoPotencia);
+
+// Questão 2: Contando números pares e ímpares entre 10 números inteiros
+let numerosPares = 0;
+let numerosImpares = 0;
+
+for (let i = 0; i < 10; i++) {
+    let numero = parseInt(prompt("Digite um número inteiro:"));
+    if (numero % 2 === 0) {
+        numerosPares++;
+    } else {
+        numerosImpares++;
+    }
+}
+
+console.log("Quantidade de números pares: " + numerosPares);
+console.log("Quantidade de números ímpares: " + numerosImpares);
+
+// Questão 3: Gerando a série de Fibonacci até que o valor seja maior que 500
+let termo1 = 0;
+let termo2 = 1;
+let proximoTermo = 0;
+
+console.log("Série de Fibonacci até que o valor seja maior que 500:");
+console.log(termo1);
+console.log(termo2);
+
+while (proximoTermo <= 500) {
+    proximoTermo = termo1 + termo2;
+    if (proximoTermo <= 500) {
+        console.log(proximoTermo);
+    }
+    termo1 = termo2;
+    termo2 = proximoTermo;
+}
+
+// Questão 4: Calculando o fatorial de um número inteiro fornecido pelo usuário
+let numeroFatorial = parseInt(prompt("Digite um número inteiro para calcular o fatorial:"));
+let fatorial = 1;
+
+for (let i = 1; i <= numeroFatorial; i++) {
+    fatorial *= i;
+}
+
+console.log(numeroFatorial + "! = " + fatorial);
+
+// Questão 5: Determinando menor valor, maior valor e soma dos valores de um conjunto de N números
+let quantidadeNumeros = parseInt(prompt("Digite a quantidade de números a serem inseridos:"));
+let menorValor = Infinity;
+let maiorValor = -Infinity;
+let somaValores = 0;
+
+for (let i = 0; i < quantidadeNumeros; i++) {
+    let numero = parseFloat(prompt("Digite um número:"));
+    if (numero < menorValor) {
+        menorValor = numero;
+    }
+    if (numero > maiorValor) {
+        maiorValor = numero;
+    }
+    somaValores += numero;
+}
+
+console.log("Menor valor: " + menorValor);
+console.log("Maior valor: " + maiorValor);
+console.log("Soma dos valores: " + somaValores);
+
+// Questão 6: Determinando menor valor, maior valor e soma dos valores de um conjunto de N números entre 0 e 1000
+let quantidadeNumeros2 = parseInt(prompt("Digite a quantidade de números a serem inseridos entre 0 e 1000:"));
+let menorValor2 = Infinity;
+let maiorValor2 = -Infinity;
+let somaValores2 = 0;
+
+for (let i = 0; i < quantidadeNumeros2; i++) {
+    let numero = parseFloat(prompt("Digite um número entre 0 e 1000:"));
+    if (numero >= 0 && numero <= 1000) {
+        if (numero < menorValor2) {
+            menorValor2 = numero;
+        }
+        if (numero > maiorValor2) {
+            maiorValor2 = numero;
+        }
+        somaValores2 += numero;
+    } else {
+        alert("Número fora do intervalo permitido. Tente novamente.");
+        i--; // Para permitir que o usuário insira novamente o número
+    }
+}
+
+console.log("Menor valor: " + menorValor2);
+console.log("Maior valor: " + maiorValor2);
+console.log("Soma dos valores: " + somaValores2);
+
+// Questão 7: Calculando o fatorial de um número inteiro positivo e menor que 16 fornecido pelo usuário
+do {
+    numeroFatorial = parseInt(prompt("Digite um número inteiro positivo e menor que 16 para calcular o fatorial:"));
+    if (numeroFatorial < 0 || numeroFatorial >= 16) {
+        alert("Número fora do intervalo permitido. Tente novamente.");
+    }
+} while (numeroFatorial < 0 || numeroFatorial >= 16);
+
+fatorial = 1;
+
+for (let i = 1; i <= numeroFatorial; i++) {
+    fatorial *= i;
+}
+
+console.log(numeroFatorial + "! = " + fatorial);
+
+// Questão 8: Determinando se um número inteiro fornecido pelo usuário é primo
+let numeroPrimo = parseInt(prompt("Digite um número inteiro para verificar se é primo:"));
+let divisivel = false;
+
+if (numeroPrimo < 2) {
+    console.log("O número não é primo.");
+} else {
+    for (let i = 2; i < numeroPrimo; i++) {
+        if (numeroPrimo % i === 0) {
+            divisivel = true;
+            console.log("O número não é primo, pois é divisível por " + i + ".");
+            break;
+        }
+    }
+    if (!divisivel) {
+        console.log("O número é primo.");
+    }
+}
+
+// Questão 9: Mostrando todos os números primos entre 1 e N e o número de divisões realizadas
+let limitePrimos = parseInt(prompt("Digite um número inteiro para encontrar todos os números primos entre 1 e ele:"));
+let numerosPrimos = [];
+let divisoes = 0;
+
+for (let i = 2; i <= limitePrimos; i++) {
+    divisivel = false;
+    for (let j = 2; j < i; j++) {
+        divisoes++;
+        if (i % j === 0) {
+            divisivel = true;
+            break;
+        }
+    }
+    if (!divisivel) {
+        numerosPrimos.push(i);
+    }
+}
+
+console.log("Números primos encontrados: " + numerosPrimos.join(", "));
+console.log("Número de divisões realizadas: " + divisoes);
+
+// Questão 10: Calculando e mostrando a média aritmética de N notas fornecidas pelo usuário
+let quantidadeNotas = parseInt(prompt("Digite a quantidade de notas:"));
+let somaNotas = 0;
+
+for (let i = 0; i < quantidadeNotas; i++) {
+    let nota = parseFloat(prompt("Digite a nota " + (i + 1) + ":"));
+    somaNotas += nota;
+}
+
+let mediaNotas = somaNotas / quantidadeNotas;
+console.log("Média");
