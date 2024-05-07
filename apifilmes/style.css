@@ -1,0 +1,45 @@
+body {
+    background-color: #790000;
+    font-family: Arial, sans-serif;
+    font-family: Georgia, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #790000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    padding-top: 50px;
+    padding: 100px;
+    background-color: #ffff;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #790000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #240101;
+}
+
+input[type="text"] {
+    width: calc(100% - 86px);
+    margin-right: 10px;
+    padding: 10px;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #fdd9c9;
+}
+#movieDetails{
+    text-align: center;
+}
