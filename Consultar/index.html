@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar cep e clima</title>
+    <script src="api.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h2>Consultar Cep</h2>
+    <div id="endereco">Digite um CEP e clique em consultar.</div>
+    <label for="cepInput">Digite o CEP:</label>
+    <input type="text" id="cepInput" placeholder="Exemplo: 50740050">
+    <button onclick="fetchEndereco()">Consultar</button>
+   
+
+    <h2>Consulte a Previsão do Tempo</h2>
+    <input type="text" id="cidadeInput" placeholder="Digite o nome da cidade">
+    <button id="buscarClimaBtn">Buscar Clima</button>
+    <div id="clima"></div>
+    </div>
+</body>
+</html>
